@@ -28,7 +28,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.CD_TOKEN }}
 
-      - name: Build and push Docker image
+      - name: Build Docker image
         run:
           docker build . --tag ghcr.io/rcalsergio/pokeapi-game:latest
+          
+      - name: Push Docker image
+        run:
           docker push ghcr.io/rcalsergio/pokeapi-game:latest
