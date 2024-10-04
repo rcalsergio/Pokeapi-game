@@ -12,11 +12,11 @@ jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      packages: write
-      attestations: write
-      id-token: write
+    #permissions:
+    #  contents: read
+    #  packages: write
+    #  attestations: write
+    #  id-token: write
 
     steps:
       - name: Checkout repository
@@ -31,7 +31,7 @@ jobs:
       - name: Build Docker image
         run:
           docker build . --tag ghcr.io/rcalsergio/pokeapi-game:latest
-          
+
       - name: Push Docker image
         run:
           docker push ghcr.io/rcalsergio/pokeapi-game:latest
