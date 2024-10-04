@@ -1,0 +1,6 @@
+docker build -t pokeapi-game .
+docker run -d --name pokeapi-game-container -p 80:80 pokeapi-game
+
+
+docker stop my-running-app 
+docker rm my-running-app 
