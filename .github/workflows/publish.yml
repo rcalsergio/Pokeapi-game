@@ -34,4 +34,4 @@ jobs:
 
       - name: Push Docker image
         run:
-          docker push ghcr.io/rcalsergio/Pokeapi-game/pokeapi-game:latest
+          docker push ghcr.io/rcalsergio/pokeapi-game:latest
